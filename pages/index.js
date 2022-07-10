@@ -2,10 +2,20 @@ import Head from 'next/head'
 import Header from '../components/header'
 import comida from '../img/comida.png'
 import Image from 'next/image'
+import { Buttonblue } from '../components/button'
 
 export default function Home() {
-  function Titulo({children}){
-    return <span className='font-extrabold text-4xl font-sans block py-1 md:text-8xl'> 
+  function Titulo({children,alterno}){
+    if (alterno){
+      return <span className='font-extrabold text-4xl font-sans py-1 md:text-8xl inline-block
+      bg-gradient-to-r from-blue-700 via-teal-500  to-green-500 text-transparent bg-clip-text
+      '> 
+        {children}
+      </span>
+    }
+    return <span className='font-extrabold text-4xl font-sans py-1 md:text-8xl inline-block
+    bg-gradient-to-r from-green-500 via-teal-500 to-blue-700 text-transparent bg-clip-text
+    '> 
       {children}
     </span>
   }
@@ -16,11 +26,20 @@ export default function Home() {
   }
   function Imagendeesta(){
     return <div className='m-6 '>
-      <Image  
-    className='hover:scale-110 transition'
-    src={comida}
-    alt='comida'
-    ></Image>
+      <div className='
+    overflow-hidden bg-green-500 inline-flex justify-center items-center relative group
+    rounded-xl
+    '>
+      <Image className='
+      group-hover:scale-110 transition group-hover:opacity-60
+      ' src={comida} alt="esto es un plato de comida"/>
+      <button className='absolute
+        capitalize opacity-0 
+        group-hover:opacity-100 font-sans z-10
+        bg-blue-700 text-white px-3 py-2 rounded-full
+        md:hover:scale-110 transition ring hover:ring-blue-700 hover:bg-blue-600
+        '>Tallarines verdes</button>
+    </div>
     </div>
     
   }
@@ -40,7 +59,7 @@ export default function Home() {
         <Titulo> Experiencia única</Titulo>
         <Textopequeño>Atencion presencial y por Delivery</Textopequeño>
         <div className=' flex justify-center py-4'>
-          <button className='text-white bg-blue-700 py-3 px-4 inline-block rounded-full uppercase'>ver carta +</button>
+          <Buttonblue uppercase>ver carta +</Buttonblue>
         </div>
       </main>
       <div className='grid grid-cols-1 md:grid-cols-2'>
