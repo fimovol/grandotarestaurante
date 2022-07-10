@@ -33,12 +33,13 @@ export default function Home() {
       <Image className='
       group-hover:scale-110 transition group-hover:opacity-60
       ' src={comida} alt="esto es un plato de comida"/>
-      <button className='absolute
+      <div className='absolute
         capitalize opacity-0 
         group-hover:opacity-100 font-sans z-10
-        bg-blue-700 text-white px-3 py-2 rounded-full
+        bg-blue-700 text-white px-3 py-2 rounded-full 
         md:hover:scale-110 transition ring hover:ring-blue-700 hover:bg-blue-600
-        '>Tallarines verdes</button>
+        select-none md:cursor-pointer
+        '>Tallarines verdes</div>
     </div>
     </div>
     

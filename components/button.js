@@ -6,10 +6,11 @@ export function Buttonblue({children,uppercase,capitalize}){
     if (capitalize){
         tipodeletra = 'capitalize'
     }
-    return <button 
+    return <div 
     className={`${tipodeletra} bg-blue-700 text-white px-4 py-3 rounded-full text-sm
-    md:hover:scale-110 transition ring hover:ring-blue-700 hover:bg-blue-600
-    `}>{children}</button>
+    md:hover:scale-110 transition ring hover:ring-blue-700 hover:bg-blue-600 md:cursor-pointer
+    select-none
+    `}>{children}</div>
 }
 export function WahtsAppIcon(){
     return <div className='
