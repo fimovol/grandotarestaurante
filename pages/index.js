@@ -32,7 +32,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <main className=' py-16 flex flex-col justify-between px-4'>
+      <main className='py-12 flex flex-col justify-between px-4 md:pt-0'>
         
         <Textopequeño>Somos un espacio donde tenemos</Textopequeño>
         <Titulo>Servicio excelente</Titulo>
